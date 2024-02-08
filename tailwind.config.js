@@ -7,10 +7,32 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#22222A',
+        secondary: '#EDB183',
+        accent: '#8CBCB9',
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        blueTech: 'url("/blue-tech.jpg")',
+        circuit: 'url("/circuit.png")',
+        lines: 'url("/lines.png")',
+        explosion: 'url("/bg-explosion.png")',
+        jesse: 'url("/jesse3.png")',
+        code: 'url("/bg-code.jpg")',
+        tech: 'url("/bg-tech.jpg")',
+        glass: 'url("/bg-glass.jpg")',
+        light: 'url("/bg-light.jpg")',
+        circles1: 'url("/circles1.png")',
+        circles2: 'url("/circles2.png")',
+        shapes: 'url("/falling-shapes.png")',
+        circleStar: 'url("/circle-star.svg")',
+        site: 'url("/site-bg.svg")',
+      },
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
+      fontFamily: {
+        sora: ['var(--font-sora)', 'sans-serif'],
       },
     },
   },
