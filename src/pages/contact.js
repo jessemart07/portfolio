@@ -122,7 +122,7 @@ function Contact() {
         <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
           <h2 className="h2 text-center ">Get <span className="text-accent">in touch</span></h2>
-          <p className="text-center mb-12">I'd love to hear more about your project.</p>
+          <p className="text-center mb-12">I`&apos;`d love to hear more about your project.</p>
           {/* form */}
           <form className="relative flex-1 flex flex-col gap-6 w-full mx-auto" onSubmit={handleSubmit(onSubmit)}>
           <input

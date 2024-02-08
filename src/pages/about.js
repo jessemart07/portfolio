@@ -171,12 +171,12 @@ function About() {
                 return (
                   <div key={infoItemIndex} className='flex flex-col flex-1 max-w-[300px] gap-x-2 items-center md:items-start text-white/60'>
                     {/* title */}
-                    <div className='font-light mb-2 md:mb-0 xl:text-left'>{item.title}</div>
+                    <div className='font-light mb-2 md:mb-0 xl:text-left'>{infoItem.title}</div>
                     {/* stage */}
                     <div>{infoItem?.stage}</div>
                     <div className='flex flex-wrap gap-x-4 gap-y-4'>
                       {/* icons */}
-                      {item.icons?.map((icon, iconIndex) => <div key={iconIndex} className='text-2xl text-white'>{icon}</div>)}
+                      {infoItem.icons?.map((icon, iconIndex) => <div key={iconIndex} className='text-2xl text-white'>{icon}</div>)}
                     </div>
                   </div>
                 )
