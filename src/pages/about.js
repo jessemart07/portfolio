@@ -167,13 +167,13 @@ function About() {
           </div>
           <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
             {
-              aboutData[index].info.map((item, itemIndex) => {
+              aboutData[index].info.map((infoItem, infoItemIndex) => {
                 return (
-                  <div key={itemIndex} className='flex flex-col flex-1 max-w-[300px] gap-x-2 items-center md:items-start text-white/60'>
+                  <div key={infoItemIndex} className='flex flex-col flex-1 max-w-[300px] gap-x-2 items-center md:items-start text-white/60'>
                     {/* title */}
                     <div className='font-light mb-2 md:mb-0 xl:text-left'>{item.title}</div>
                     {/* stage */}
-                    <div>{item?.stage}</div>
+                    <div>{infoItem?.stage}</div>
                     <div className='flex flex-wrap gap-x-4 gap-y-4'>
                       {/* icons */}
                       {item.icons?.map((icon, iconIndex) => <div key={iconIndex} className='text-2xl text-white'>{icon}</div>)}
