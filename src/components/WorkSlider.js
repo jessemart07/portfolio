@@ -159,16 +159,6 @@ function WorkSlider() {
         <Swiper 
             slidesPerView={1}
             slidesPerGroup={1}
-            breakpoints={{
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                }
-            }}
             pagination={{
                 clickable: true
             }}

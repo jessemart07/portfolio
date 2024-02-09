@@ -63,16 +63,6 @@ function ServicesSlider() {
         <Swiper 
             slidesPerView={1}
             slidesPerGroup={1}
-            breakpoints={{
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                },
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                }
-            }}
             freeMode={true}
             pagination={{
                 clickable: true
