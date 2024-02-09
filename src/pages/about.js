@@ -77,7 +77,7 @@ function About() {
         animate="show"
         exit="hidden"
         className="hidden xl:flex absolute bottom-0 -right-0 ">
-        <Image src={'/jesse2.png'} width={500} height={500}/>
+        <Image src={'/jesse2.png'} width={500} height={500} priority={true}/>
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row xl:gap-x-10">
         {/* text */}

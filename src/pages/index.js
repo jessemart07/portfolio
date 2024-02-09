@@ -50,8 +50,10 @@ export default function Home() {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className="hidden xl:flex bg-none xl:bg-jesse xl:bg-cover bottom-0 
-        xl:bg-no-repeat w-full right-0 h-[90%] absolute z-[10]"></motion.div>
+        className="hidden xl:flex bg-none bottom-0 
+       w-full max-w-[950px] min-w-[850px] right-0 h-[90%] absolute z-[10]">
+          <Image src={'/jesse1.png'} fill={true} priority={true}/>
+        </motion.div>
         
         {/* Particles */}
         <ParticlesContainer />
