@@ -157,6 +157,8 @@ import { FreeMode, Pagination } from 'swiper';
 function WorkSlider() {
   return (
         <Swiper 
+            slidesPerView={1}
+            slidesPerGroup={1}
             breakpoints={{
                 320: {
                     slidesPerView: 1,

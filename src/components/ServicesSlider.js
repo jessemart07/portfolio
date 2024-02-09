@@ -58,12 +58,11 @@ const serviceData = [
 // import swiper modules
 import { FreeMode, Pagination } from 'swiper';
 
-
-
 function ServicesSlider() {
     return (
         <Swiper 
-        slidesPerView={"auto"}
+            slidesPerView={1}
+            slidesPerGroup={1}
             breakpoints={{
                 320: {
                     slidesPerView: 1,
