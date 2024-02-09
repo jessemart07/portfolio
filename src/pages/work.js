@@ -36,11 +36,15 @@ function Work() {
                 </motion.h2>
               </div>
             </div>
-            <div 
+            <motion.div 
+            variants={fadeIn('up', 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
             className='w-full xl:max-w-[75%]'> 
               {/* slider */}
               <WorkSlider />
-            </div>
+            </motion.div>
           </div>
       </div>
     </div>

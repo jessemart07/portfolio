@@ -36,7 +36,7 @@ const pathName = {
 function Transition({path}) {
   return (
     <>
-        <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#26262e] border-solid border-r-2 border-r-secondary'
+        <motion.div className='absolute top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#26262e] border-solid border-r-2 border-r-secondary'
         variants={transitionVariants}
         initial='initial'
         animate='animate'
@@ -50,13 +50,13 @@ function Transition({path}) {
                 {pathName[path]}
             </motion.div>
         </motion.div>
-        <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#d4a682]" 
+        <motion.div className="absolute top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#d4a682]" 
         variants={transitionVariants}
         initial='initial'
         animate='animate'
         exit='exit'
         transition={{delay: 0.4, duration: 0.6, ease: 'easeInOut'}}></motion.div>
-        <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#e6b894]" 
+        <motion.div className="absolute top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#e6b894]" 
         variants={transitionVariants}
         initial='initial'
         animate='animate'
