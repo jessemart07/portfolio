@@ -172,12 +172,13 @@ function WorkSlider() {
             }}
             modules={[FreeMode, Pagination]}
             freeMode={true}
+            className='h-max'
             >{workData.map((item, workIndex) => {
                 return (
                     <SwiperSlide key={workIndex}>
                         <div 
-                        className="bg-[#8cbcb90f] h-[520px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
-                        sm:gap-x-0">
+                        className="bg-[#8cbcb90f] min-h-[650px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
+                        sm:gap-x-0 ">
                             {/* title and desc */}
                             <div className='mb-4'>
                                 <div className=' relative flex justify-center border-accent border-2 rounded-lg
@@ -195,8 +196,8 @@ function WorkSlider() {
                                 </div>
                                 <p className='max-w-full leading-normal text-sm'>{item.description}</p>
                             </div>
-                            {/* arrow */}
-                            <div className="flex gap-x-3 mb-4">
+                            {/* Technologies */}
+                            <div className="flex gap-3 mb-4 flex-wrap">
                                 {item.technologies.map((el, techIndex) => {
                                     return (
                                         <div key={techIndex} className='flex gap-x-1 items-center border-accent border-2 px-2 rounded-md w-max'>
