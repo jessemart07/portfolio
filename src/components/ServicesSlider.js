@@ -63,6 +63,7 @@ import { FreeMode, Pagination } from 'swiper';
 function ServicesSlider() {
     return (
         <Swiper 
+        slidesPerView={"auto"}
             breakpoints={{
                 320: {
                     slidesPerView: 1,

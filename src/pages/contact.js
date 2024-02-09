@@ -119,10 +119,15 @@ function Contact() {
         absolute w-[100px] xl:w-[200px] h-[100px] xl:h-[200px] xl:flex bg-cover bg-no-repeat z-0 "></div>
         <div className="bg-lines bottom-0 opacity-30 right-0 xl:-right-20 xl:-bottom-10
         absolute w-[120px] xl:w-[300px] h-[120px] xl:h-[200px] xl:flex bg-cover bg-no-repeat z-0 "></div>
-        <div className="flex flex-col w-full max-w-[700px]">
+        <motion.div 
+        variants={fadeIn('down', 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="flex flex-col w-full max-w-[700px]">
           {/* text */}
           <h2 className="h2 text-center ">Get <span className="text-accent">in touch</span></h2>
-          <p className="text-center mb-12">I`&apos;`d love to hear more about your project.</p>
+          <p className="text-center mb-12">I'd love to hear more about your project.</p>
           {/* form */}
           <form className="relative flex-1 flex flex-col gap-6 w-full mx-auto" onSubmit={handleSubmit(onSubmit)}>
           <input
@@ -204,7 +209,7 @@ function Contact() {
               </button>
           </form>
           
-        </div>
+        </motion.div>
       </div>
     </div>
   )

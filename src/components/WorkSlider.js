@@ -172,12 +172,11 @@ function WorkSlider() {
             }}
             modules={[FreeMode, Pagination]}
             freeMode={true}
-            className='h-max'
             >{workData.map((item, workIndex) => {
                 return (
                     <SwiperSlide key={workIndex}>
                         <div 
-                        className="bg-[#8cbcb90f] min-h-[650px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
+                        className="bg-[#8cbcb90f] h-[620px] md:h-[540px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
                         sm:gap-x-0 ">
                             {/* title and desc */}
                             <div className='mb-4'>
