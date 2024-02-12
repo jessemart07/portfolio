@@ -57,4 +57,14 @@
   .inputError {
     @apply border-red-600 focus:border-red-600 ring-red-100 dark:ring-0
   }
+  .slick-dots {
+    background-color: #EDB183;
+  }
+    /* the slides */
+  .slick-slide > div {
+      margin: 0 27px;
+  }
+  .slick-slide > div:nth-child(1){
+    margin-left: 0;
+  }
 }

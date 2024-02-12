@@ -56,13 +56,23 @@ const serviceData = [
 ];
 
 // import swiper modules
-import { FreeMode, Pagination } from 'swiper';
+import { FreeMode, Pagination } from 'swiper/modules';
 
 function ServicesSlider() {
     return (
         <Swiper 
             slidesPerView={1}
             slidesPerGroup={1}
+            breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                }
+            }}
             freeMode={true}
             pagination={{
                 clickable: true

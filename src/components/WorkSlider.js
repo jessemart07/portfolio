@@ -24,6 +24,10 @@ import {
 // next/image
 import Image from 'next/image';
 
+// import carousel styles
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const workData = [
     {
         title: 'Budget Buddy',
@@ -152,29 +156,68 @@ const workData = [
 ]
 
 // import swiper modules
-import { FreeMode, Pagination } from 'swiper';
+import { FreeMode, Pagination } from 'swiper/modules';
 
+import Slider from 'react-slick';
 function WorkSlider() {
+    const settings = {
+        arrows: false,
+        dots: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: false,
+                dots: true
+                }
+            }
+        ]
+      };
   return (
         <Swiper 
-            slidesPerView={1}
-            slidesPerGroup={1}
+            breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                }
+            }}
             pagination={{
                 clickable: true
             }}
             modules={[FreeMode, Pagination]}
             freeMode={true}
+            className='gap-x-6'
             >{workData.map((item, workIndex) => {
                 return (
                     <SwiperSlide key={workIndex}>
                         <div 
-                        className="bg-[#8cbcb90f] h-[620px] md:h-[540px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
+                        key={workIndex}
+                        className="bg-[#8cbcb90f] w-full h-[620px] md:h-[600px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
                         sm:gap-x-0 ">
                             {/* title and desc */}
                             <div className='mb-4'>
                                 <div className=' relative flex justify-center border-accent border-2 rounded-lg
                                 p-2 h-[200px]'>
-                                    <Image src={item.imageSrc} fill={true} objectFit='contain'/>
+                                    <Image src={item.imageSrc} fill={true} objectFit='contain' priority={true}/>
                                 </div>
                                 <div className='my-2 text-2xl'>{item.title}</div>
                                 <div>
@@ -201,7 +244,7 @@ function WorkSlider() {
                                 })}
                             </div>
                         </div>
-                    </SwiperSlide>
+                   </SwiperSlide>
                 )
             })
         }</Swiper>
