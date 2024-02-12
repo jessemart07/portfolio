@@ -65,24 +65,24 @@ import { Pagination } from 'swiper/modules';
 function ServicesSlider() {
     return (
         <Swiper 
-            slidesPerView={1}
-            slidesPerGroup={1}
-            breakpoints={{
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                },
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                }
-            }}
+            slidesPerView={3}
+            // slidesPerGroup={1}
+            // breakpoints={{
+            //     640: {
+            //         slidesPerView: 3,
+            //         spaceBetween: 15,
+            //     },
+            //     320: {
+            //         slidesPerView: 1,
+            //         spaceBetween: 15,
+            //     }
+            // }}
             
             pagination={{
                 clickable: true
             }}
             modules={[Pagination]}
-            className="h-[240px] sm:h-[340px]"
+            
         >{serviceData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
