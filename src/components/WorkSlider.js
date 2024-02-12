@@ -206,7 +206,6 @@ function WorkSlider() {
             }}
             modules={[FreeMode, Pagination]}
             freeMode={true}
-            className='gap-x-6'
             >{workData.map((item, workIndex) => {
                 return (
                     <SwiperSlide key={workIndex}>

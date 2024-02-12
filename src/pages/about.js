@@ -70,7 +70,7 @@ function About() {
   const [index, setIndex] = useState(0);
   
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left p-4'>
+    <div className='h-full xl:h-screen bg-primary/30 py-32 text-center xl:text-left p-4'>
       <motion.div 
         variants={fadeIn('up', 0.2)}
         initial="hidden"

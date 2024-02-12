@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="bg-primary/60 h-screen">
       
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+      <div className="w-full h-full xl:h-screen bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="mix-blend-luminosity hidden xl:flex bg-none xl:bg-tech xl:bg-cover bottom-[-10px] absolute w-[110%] left-[-50%] h-full z-[-10] blur-[2px]">
           
         </div>

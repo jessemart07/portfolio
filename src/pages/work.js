@@ -41,7 +41,7 @@ function Work() {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className='w-full xl:max-w-[75%]'> 
+            className='w-full xl:w-[70vw]'> 
               {/* slider */}
               <WorkSlider />
             </motion.div>

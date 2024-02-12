@@ -208,7 +208,6 @@ function Contact() {
                   text-[22px]"/>
               </button>
           </form>
-          
         </motion.div>
       </div>
     </div>

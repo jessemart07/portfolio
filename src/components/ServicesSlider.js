@@ -60,28 +60,29 @@ const serviceData = [
 ];
 
 // import swiper modules
-import { Pagination } from 'swiper/modules';
+import { FreeMode, Pagination } from 'swiper/modules';
 
 function ServicesSlider() {
     return (
         <Swiper 
-            slidesPerView={3}
+            spaceBetween={15}
             // slidesPerGroup={1}
-            // breakpoints={{
-            //     640: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 15,
-            //     },
-            //     320: {
-            //         slidesPerView: 1,
-            //         spaceBetween: 15,
-            //     }
-            // }}
+            breakpoints={{
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                }
+            }}
             
             pagination={{
                 clickable: true
             }}
-            modules={[Pagination]}
+            freeMode={true}
+            modules={[FreeMode,Pagination]}
             
         >{serviceData.map((item, index) => {
             return (
