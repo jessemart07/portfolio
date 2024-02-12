@@ -6,8 +6,7 @@ function WorkItem({item, index}) {
   return (
     <div 
         key={index}
-        className="bg-[#8cbcb90f] w-full h-[620px] md:h-[600px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
-        sm:gap-x-0 ">
+        className="bg-[#8cbcb90f] h-[620px] md:h-[550px] group rounded-lg px-6 py-8 cursor-pointer flex flex-col">
             {/* title and desc */}
             <div className='mb-4'>
                 <div className=' relative flex justify-center border-accent border-2 rounded-lg

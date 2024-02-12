@@ -190,30 +190,9 @@ function WorkSlider() {
         ]
       };
   return (
-        <Swiper 
-            breakpoints={{
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                }
-            }}
-            pagination={{
-                clickable: true
-            }}
-            modules={[FreeMode, Pagination]}
-            freeMode={true}
-            >{workData.map((item, workIndex) => {
-                return (
-                    <SwiperSlide key={workIndex}>
-                        <WorkItem item={item} index={workIndex}/>
-                   </SwiperSlide>
-                )
-            })
-        }</Swiper>
+        <Slider {...settings}>
+            {workData.map((item, workIndex) => <WorkItem key={workIndex} item={item} index={workIndex}/>)}
+        </Slider>
     )
 }
 

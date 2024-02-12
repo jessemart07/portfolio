@@ -14,7 +14,7 @@ function Services() {
       <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row items-center gap-x-8" >
             {/* text */}
-            <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4">
+            <div className="text-center flex xl:w-[15vw] flex-col lg:text-left mb-4">
               <div className="flex flex-col">
                 <motion.span
                   variants={fadeIn('down', 0.4)}

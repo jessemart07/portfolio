@@ -60,38 +60,41 @@ const serviceData = [
 ];
 
 // import swiper modules
-import { FreeMode, Pagination } from 'swiper/modules';
+import Slider from 'react-slick';
 
 function ServicesSlider() {
-    return (
-        <Swiper 
-            spaceBetween={15}
-            // slidesPerGroup={1}
-            breakpoints={{
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                },
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
+    const settings = {
+        arrows: false,
+        dots: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true
                 }
-            }}
-            
-            pagination={{
-                clickable: true
-            }}
-            freeMode={true}
-            modules={[FreeMode,Pagination]}
-            
-        >{serviceData.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                  <ServiceItem item={item} />
-              </SwiperSlide>
-            )
-          })
-        }</Swiper>
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: false,
+                dots: true
+                }
+            }
+        ]
+      };
+    return (
+        <Slider {...settings}>
+            {serviceData.map((item, index) => <ServiceItem item={item} key={index}/>)}
+        </Slider>
       )
 }
 
