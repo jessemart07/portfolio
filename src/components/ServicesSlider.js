@@ -60,7 +60,7 @@ const serviceData = [
 ];
 
 // import swiper modules
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 function ServicesSlider() {
     return (
@@ -77,16 +77,16 @@ function ServicesSlider() {
                     spaceBetween: 15,
                 }
             }}
-            freeMode={true}
+            
             pagination={{
                 clickable: true
             }}
-            modules={[FreeMode, Pagination]}
+            modules={[Pagination]}
             className="h-[240px] sm:h-[340px]"
         >{serviceData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                  <div className='flex place-items-center'>Slide {index}</div>
+                  <ServiceItem item={item} />
               </SwiperSlide>
             )
           })
