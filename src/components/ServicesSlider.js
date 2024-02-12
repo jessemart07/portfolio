@@ -22,6 +22,10 @@ import { GiSpanner } from "react-icons/gi";
 import { FaDesktop, FaWordpress } from 'react-icons/fa';
 import { FaCartShopping } from "react-icons/fa6";
 // data
+
+// components
+import ServiceItem from './ServiceItem';
+
 const serviceData = [
 {
     icon: <RxPencil2 />,
@@ -64,12 +68,12 @@ function ServicesSlider() {
             slidesPerView={1}
             slidesPerGroup={1}
             breakpoints={{
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                },
                 640: {
                     slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                320: {
+                    slidesPerView: 1,
                     spaceBetween: 15,
                 }
             }}
@@ -82,20 +86,7 @@ function ServicesSlider() {
         >{serviceData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                  <div 
-                  className="bg-[#8cbcb90f] group h-[250px] rounded-lg px-6 py-8 cursor-pointer flex sm:flex-col gap-x-6
-                  sm:gap-x-0">
-                    {/* icon */}
-                    <div className='text-4xl text-secondary  mb-4'>{item.icon}</div>
-                    {/* title and desc */}
-                    <div className='mb-4'>
-                      <div className='mb-2 text-lg'>{item.title}</div>
-                      <p className='max-w-[350px] leading-normal'>{item.description}</p>
-                    </div>
-                    {/* arrow */}
-                    <div className="text-3xl"><RxArrowTopRight className='group-hover:rotate-45 
-                    group-hover: text-accent transition-all duration-300'/></div>
-                  </div>
+                  <div className='flex place-items-center'>Slide {index}</div>
               </SwiperSlide>
             )
           })
