@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 // swiper
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -161,6 +161,12 @@ import { FreeMode, Pagination } from 'swiper/modules';
 import Slider from 'react-slick';
 import WorkItem from './WorkItem';
 function WorkSlider() {
+    const [domLoaded, setDomLoaded] = useState(false);
+
+    useEffect(() => {
+      setDomLoaded(true);
+    }, [])
+    
     const settings = {
         arrows: false,
         dots: true,
@@ -190,9 +196,26 @@ function WorkSlider() {
         ]
       };
   return (
-        <Slider {...settings}>
-            {workData.map((item, workIndex) => <WorkItem key={workIndex} item={item} index={workIndex}/>)}
-        </Slider>
+    <div>
+        {domLoaded && <Swiper breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                }
+            }}
+            freeMode={true}
+            pagination={{
+                clickable: true
+            }}
+            modules={[FreeMode, Pagination]}
+            >
+                {workData.map((item, index) => <SwiperSlide><WorkItem item={item} key={index} index={index}/></SwiperSlide>)}
+            </Swiper>}
+    </div>
     )
 }
 

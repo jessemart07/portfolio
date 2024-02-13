@@ -21,7 +21,6 @@ export default function Home() {
           variants={fadeIn('down', 0.2)}
           initial='hidden'
           animate='show'
-          exit='hidden'
           >
             Hi, <span className='text-accent'>I'm Jesse</span> <br />
             I Build Things For <br />
@@ -31,7 +30,6 @@ export default function Home() {
           variants={fadeIn('down', 0.2)}
           initial='hidden'
           animate='show'
-          exit='hidden'
           className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
             <span>I am a passionate web software developer with a love to combine <span className='text-secondary'>fuctionality with creativity</span>.</span><br />
           </motion.p>
@@ -49,7 +47,6 @@ export default function Home() {
         variants={fadeIn('up', 0.2)}
         initial='hidden'
         animate='show'
-        exit='hidden'
         className="hidden xl:flex bg-none bottom-0 
        w-full max-w-[950px] min-w-[850px] right-0 h-[90%] absolute z-[10]">
           <Image src={'/jesse1.png'} fill={true} priority={true}/>

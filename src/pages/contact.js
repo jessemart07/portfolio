@@ -123,7 +123,6 @@ function Contact() {
         variants={fadeIn('down', 0.2)}
         initial="hidden"
         animate="show"
-        exit="hidden"
         className="flex flex-col w-full max-w-[700px]">
           {/* text */}
           <h2 className="h2 text-center ">Get <span className="text-accent">in touch</span></h2>

@@ -5,9 +5,10 @@ import { RxArrowTopRight } from 'react-icons/rx'
 
 function ServiceItem({item}) {
   return (
+    
     <div 
-        className="bg-[#8cbcb90f] w-full group h-[250px] rounded-lg px-6 py-8 cursor-pointer flex sm:flex-col gap-x-6
-        sm:gap-x-0 mx-2">
+        className="bg-[#8cbcb90f] group h-[250px] rounded-lg px-6 py-8 cursor-pointer flex flex-col gap-x-6
+        sm:gap-x-0">
         {/* icon */}
         <div className='text-4xl text-secondary  mb-4'>{item.icon}</div>
         {/* title and desc */}

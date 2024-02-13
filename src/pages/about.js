@@ -75,7 +75,6 @@ function About() {
         variants={fadeIn('up', 0.2)}
         initial="hidden"
         animate="show"
-        exit="hidden"
         className="hidden xl:flex absolute bottom-0 -right-0 ">
         <Image src={'/jesse2.png'} width={500} height={500} priority={true}/>
       </motion.div>
@@ -86,14 +85,12 @@ function About() {
             variants={fadeIn('right', 0.2)}
             initial="hidden"
             animate="show"
-            exit="hidden"
             className='text-sm pl-1'
           >MY</motion.span>
           <motion.h2 
           variants={fadeIn('right', 0.2)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           className='h2 text-accent'>
             Story
           </motion.h2>
@@ -101,7 +98,6 @@ function About() {
           variants={fadeIn('right', 0.2)}
           initial="hidden"
           animate="show"
-          exit="hidden"
           >
             I started doing freelance web development {Number(new Date().getFullYear()) - 2018} years ago after graduating in 2018. 
             Since then I have been focusing on building websites and web apps for startups, increasing my coding arsenal in the process, and enjoying 
@@ -112,7 +108,6 @@ function About() {
             variants={fadeIn('right', 0.6)}
             initial="hidden"
             animate="show"
-            exit="hidden"
           >
             <div className='flex flex-1 xl:gap-x-6'>
               {/* experience */}
@@ -147,7 +142,6 @@ function About() {
         variants={fadeIn('left', 0.2)}
         initial="hidden"
         animate="show"
-        exit="hidden"
         className='flex flex-col w-full xl:max-w-[48%] xl:h-[480px] border-2 border-accent rounded-md p-4 mx-auto my-4 xl:my-0'>
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {

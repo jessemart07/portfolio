@@ -12,8 +12,9 @@ const transitionVariants = {
         width: '0%',
     },
     exit: {
-        x: ['0%', '100%'],
-        width: ['0%', '100%']
+        opacity: 1,
+        x: '0%',
+        width: '0%'
     }
 }
 const textVariants = {
@@ -22,7 +23,7 @@ const textVariants = {
     },
     animate: {
         x: ['50%', '-100%'],
-        transition: {duration: 0.65, ease: [0.32, 0, 0.67, 0]}
+        transition: {duration: 0.8, ease: [0.32, 0, 0.67, 0]}
     },
 }
 
@@ -40,8 +41,7 @@ function Transition({path}) {
         variants={transitionVariants}
         initial='initial'
         animate='animate'
-        exit='exit'
-        transition={{delay: 0.2, duration: 0.6, ease: 'easeInOut'}}>
+        transition={{delay: 0.2, duration: 0.8, ease: 'easeInOut'}}>
             <motion.div className="flex w-screen h-screen place-items-center text-[#26262e] text-4xl xl:text-7xl text-outline" 
             variants={textVariants}
             initial="initial"
@@ -54,14 +54,12 @@ function Transition({path}) {
         variants={transitionVariants}
         initial='initial'
         animate='animate'
-        exit='exit'
-        transition={{delay: 0.4, duration: 0.6, ease: 'easeInOut'}}></motion.div>
+        transition={{delay: 0.4, duration: 0.8, ease: 'easeInOut'}}></motion.div>
         <motion.div className="absolute top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#e6b894]" 
         variants={transitionVariants}
         initial='initial'
         animate='animate'
-        exit='exit'
-        transition={{delay: 0.6, duration: 0.6, ease: 'easeInOut'}}></motion.div>
+        transition={{delay: 0.6, duration: 0.8, ease: 'easeInOut'}}></motion.div>
     </>
   )
 }

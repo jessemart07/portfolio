@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 // swiper
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -21,11 +21,14 @@ import {
 import { GiSpanner } from "react-icons/gi";
 import { FaDesktop, FaWordpress } from 'react-icons/fa';
 import { FaCartShopping } from "react-icons/fa6";
-// data
+
+// Swiper modules
+import { FreeMode, Pagination } from 'swiper/modules';
 
 // components
 import ServiceItem from './ServiceItem';
 
+// data
 const serviceData = [
 {
     icon: <RxPencil2 />,
@@ -63,12 +66,18 @@ const serviceData = [
 import Slider from 'react-slick';
 
 function ServicesSlider() {
+    const [domLoaded, setDomLoaded] = useState(false);
+
+    useEffect(() => {
+      setDomLoaded(true);
+    }, [])
+
     const settings = {
         arrows: false,
         dots: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: false,
         responsive: [
             {
@@ -91,10 +100,28 @@ function ServicesSlider() {
             }
         ]
       };
+
     return (
-        <Slider {...settings}>
-            {serviceData.map((item, index) => <ServiceItem item={item} key={index}/>)}
-        </Slider>
+        <div>
+            {domLoaded && <Swiper breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                }
+            }}
+            freeMode={true}
+            pagination={{
+                clickable: true
+            }}
+            modules={[FreeMode, Pagination]}
+            className='h-[240px] sm-h-[340px]'>
+                {serviceData.map((item, index) => <SwiperSlide><ServiceItem item={item} key={index} /></SwiperSlide>)}
+            </Swiper>}
+        </div>
       )
 }
 

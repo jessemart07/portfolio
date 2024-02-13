@@ -15,7 +15,7 @@ function Work() {
       <div className=" bg-shapes -left-64 xl:-left-48 absolute w-[500px] xl:w-[500px] h-[80%] xl:h-full 
       bg-cover bg-no-repeat z-0 opacity-10 "></div>
       <div className='container mx-auto'>
-          <div className="flex flex-col lg:flex-row items-center gap-x-2" >
+          <div className="flex flex-col xl:flex-row items-center gap-x-2" >
             {/* text */}
             <div className="text-center flex w-full lg:w-[15vw] flex-col lg:text-left mb-4">
               <div className="flex flex-col">
@@ -23,14 +23,12 @@ function Work() {
                   variants={fadeIn('down', 0.4)}
                   initial="hidden"
                   animate="show"
-                  exit="hidden"
                   className='text-sm pl-1'
                 >MY</motion.span>
                 <motion.h2 
                 variants={fadeIn('down', 0.4)}
                 initial="hidden"
                 animate="show"
-                exit="hidden"
                 className='h2 text-accent'>
                   Work
                 </motion.h2>
@@ -40,7 +38,7 @@ function Work() {
             variants={fadeIn('up', 0.3)}
             initial="hidden"
             animate="show"
-            exit="hidden"
+            
             className='w-full lg:w-[70vw]'> 
               {/* slider */}
               <WorkSlider />

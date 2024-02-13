@@ -15,12 +15,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Layout>
-      <AnimatePresence mode='wait'>
-        <motion.div key={router.route} className='h-full'>
+      <AnimatePresence>
+        <motion.div key={router.route} className='h-full'> 
           <Transition path={router.route}/>
           <Component {...pageProps} />
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> 
     </Layout>
   )
 }
