@@ -31,7 +31,7 @@ export default function Home() {
           initial='hidden'
           animate='show'
           className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-            <span>I am a passionate web software developer with a love to combine <span className='text-secondary'>fuctionality with creativity</span>.</span><br />
+            <span>I am a passionate web software developer with a love to combine <span className='text-secondary'>functionality with creativity</span>.</span><br />
           </motion.p>
           
           {/* <div className="">
