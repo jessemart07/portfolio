@@ -6,6 +6,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // icons
@@ -23,7 +24,7 @@ import { FaDesktop, FaWordpress } from 'react-icons/fa';
 import { FaCartShopping } from "react-icons/fa6";
 
 // Swiper modules
-import { FreeMode, Pagination } from 'swiper/modules';
+import { FreeMode, Pagination, Navigation } from 'swiper/modules';
 
 // components
 import ServiceItem from './ServiceItem';
@@ -62,44 +63,12 @@ const serviceData = [
 },
 ];
 
-// import swiper modules
-import Slider from 'react-slick';
-
 function ServicesSlider() {
     const [domLoaded, setDomLoaded] = useState(false);
 
     useEffect(() => {
       setDomLoaded(true);
     }, [])
-
-    const settings = {
-        arrows: false,
-        dots: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 480,
-                settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true
-                }
-            }
-        ]
-      };
 
     return (
         <div>
@@ -113,11 +82,12 @@ function ServicesSlider() {
                     spaceBetween: 15,
                 }
             }}
+            navigation={true}
             freeMode={true}
             pagination={{
                 clickable: true
             }}
-            modules={[FreeMode, Pagination]}
+            modules={[FreeMode, Pagination, Navigation]}
             className='h-[240px] sm-h-[340px]'>
                 {serviceData.map((item, index) => <SwiperSlide><ServiceItem item={item} key={index} /></SwiperSlide>)}
             </Swiper>}

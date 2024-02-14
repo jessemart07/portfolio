@@ -7,27 +7,20 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // icons
-import {
-    RxCrop,
-    RxPencil2,
-    RxDesktop,
-    RxReader,
-    RxRocket,
-    RxArrowTopRight,
-  } from "react-icons/rx";
   import { IoLogoJavascript } from "react-icons/io5";
-  import { FaReact, FaHtml5, FaCss3, FaPhp, FaNode, FaNodeJs  } from "react-icons/fa";
+  import { FaReact, FaHtml5, FaCss3, FaPhp, FaNode, } from "react-icons/fa";
   import { SiFirebase , SiAdobexd, SiPhpmyadmin } from "react-icons/si";
-  
-// next/image
-import Image from 'next/image';
 
-// import carousel styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import swiper modules
+import { FreeMode, Pagination, Navigation } from 'swiper/modules';
 
+// components
+import WorkItem from './WorkItem';
+
+// data
 const workData = [
     {
         title: 'Budget Buddy',
@@ -155,11 +148,7 @@ const workData = [
     }
 ]
 
-// import swiper modules
-import { FreeMode, Pagination } from 'swiper/modules';
 
-import Slider from 'react-slick';
-import WorkItem from './WorkItem';
 function WorkSlider() {
     const [domLoaded, setDomLoaded] = useState(false);
 
@@ -167,34 +156,7 @@ function WorkSlider() {
       setDomLoaded(true);
     }, [])
     
-    const settings = {
-        arrows: false,
-        dots: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 480,
-                settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true
-                }
-            }
-        ]
-      };
+
   return (
     <div>
         {domLoaded && <Swiper breakpoints={{
@@ -211,7 +173,8 @@ function WorkSlider() {
             pagination={{
                 clickable: true
             }}
-            modules={[FreeMode, Pagination]}
+            navigation={true}
+            modules={[FreeMode, Pagination, Navigation]}
             >
                 {workData.map((item, index) => <SwiperSlide><WorkItem item={item} key={index} index={index}/></SwiperSlide>)}
             </Swiper>}

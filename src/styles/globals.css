@@ -17,26 +17,18 @@
 .swiper-rtl .swiper-button-prev:after {
   color: #EDB183;
 }
-.slick-dots li button:before {
-  opacity: 0.5!important;
-  font-size: 0.6rem!important;
-  color: #EDB183!important;
-}
-.slick-dots li.slick-active button:before{
-  color: #EDB183!important;
-  opacity: 1!important;
-}
-/* the slides */
-.slick-slide > div {
-    margin: 0 16px;
-}
-.slick-slide > div:nth-child(1){
-  margin-left: 0;
-}
-.slick-list {
-  margin-left: -16px;
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 20px!important;
+  
 }
 
+.swiper-button-next{
+  justify-content: end!important;
+}
+
+.swiper-button-prev{
+  justify-content: start!important;
+}
 @layer base {
   body {
     @apply bg-primary overflow-x-hidden leading-relaxed;
