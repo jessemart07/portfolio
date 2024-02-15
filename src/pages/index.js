@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import ParticlesContainer from '@/components/ParticlesContainer';
 import {motion} from 'framer-motion';
 import { fadeIn } from '../../variants';
-import Avatar from '@/components/Avatar';
 import ProjectBtn from '@/components/ProjectBtn';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -48,8 +47,8 @@ export default function Home() {
         initial='hidden'
         animate='show'
         className="hidden xl:flex bg-none bottom-0 
-       w-full max-w-[950px] min-w-[850px] right-0 h-[90%] absolute z-[10]">
-          <Image src={'/jesse1.png'} fill={true} priority={true}/>
+       w-full max-w-[850px] min-w-[750px] right-0 h-[90%] absolute z-[10]">
+          <Image src={'/bg-images/jesse1.png'} fill={true} priority={true}/>
         </motion.div>
         
         {/* Particles */}

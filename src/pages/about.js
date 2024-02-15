@@ -75,8 +75,8 @@ function About() {
         variants={fadeIn('up', 0.2)}
         initial="hidden"
         animate="show"
-        className="hidden xl:flex absolute bottom-0 -right-0 ">
-        <Image src={'/jesse2.png'} width={500} height={500} priority={true}/>
+        className="hidden xl:flex absolute bottom-0 -right-[30px] h-[650px] w-[500px]">
+        <Image src={'/bg-images/jesse2.png'} fill={true} priority={true}/>
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row xl:gap-x-10">
         {/* text */}
