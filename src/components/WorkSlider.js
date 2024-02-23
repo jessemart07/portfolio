@@ -24,7 +24,7 @@ import WorkItem from './WorkItem';
 const workData = [
     {
         title: 'Budget Buddy',
-        role: 'Devloper',
+        role: 'Developer & Designer',
         client: 'Own Project',
         description: `My budget app dubbed the "Budget Buddy" 
         is a small mock up web based app where someone could 
@@ -48,7 +48,7 @@ const workData = [
     },
     {
         title: 'Jesse and Kylie Music',
-        role: 'Devloper',
+        role: 'Deveeloper',
         client: 'Jesse and Kylie',
         description: `A responsive single page website used to market a musical duo. 
         This website was used to share relevant information for the duo such as 
@@ -71,7 +71,7 @@ const workData = [
     },
     {
         title: 'Ohana User System',
-        role: 'Devloper',
+        role: 'Developer',
         client: 'Ohana',
         description: `Ohana family website is a web platform for house sitters 
         and pet sitters. I created a user account system which took care of 
@@ -99,7 +99,7 @@ const workData = [
     },
     {
         title: 'DISC Quiz',
-        role: 'Devloper',
+        role: 'Developer',
         client: 'Turnkey Corporate Soutions',
         description: `The DISC quiz app is based on the popular DISC personality 
         test. This small app consisted of 24 questions and then a results page.`,
@@ -121,7 +121,7 @@ const workData = [
     },
     {
         title: 'Global Academy LMS',
-        role: 'Devloper',
+        role: 'Developer',
         client: 'Global Academy',
         description: `The Global Academy LMS is a web based app to manage a number of 
         students and keep track of their performance. The functionality ranged from 
