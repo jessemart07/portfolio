@@ -48,7 +48,7 @@ const workData = [
     },
     {
         title: 'Jesse and Kylie Music',
-        role: 'Deveeloper',
+        role: 'Developer',
         client: 'Jesse and Kylie',
         description: `A responsive single page website used to market a musical duo. 
         This website was used to share relevant information for the duo such as 
