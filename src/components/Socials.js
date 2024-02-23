@@ -4,7 +4,8 @@ import Link from 'next/link';
 // icons
 import { LiaGithubSquare } from "react-icons/lia";
 import { CiLinkedin } from "react-icons/ci";
-import { AiFillCodeSandboxSquare } from "react-icons/ai";
+import { AiFillCodeSandboxSquare, AiOutlineFacebook } from "react-icons/ai";
+
 
 function Socials() {
   return (
@@ -24,6 +25,11 @@ function Socials() {
             target="_blank"
             className='hover:text-accent transition all duration-300'
             ><AiFillCodeSandboxSquare /></Link>
+            <Link
+            href="https://web.facebook.com/jessecodesdev"
+            target="_blank"
+            className='hover:text-accent transition all duration-300'
+            ><AiOutlineFacebook /></Link>
         </div>
   )
 }
