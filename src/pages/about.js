@@ -35,23 +35,23 @@ const aboutData = [
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
-          <FaDatabase />,
-          <FaNodeJs />,
-          <FaUnity />,
+          {icon: <FaHtml5 />, name: "HTML5"},
+          {icon: <FaCss3 />, name: "CSS3"},
+          {icon: <FaJs />, name: "Javascript"},
+          {icon: <FaReact />, name: "React.js"},
+          {icon: <SiNextdotjs />, name: "Next.js"},
+          {icon: <SiFramer />, name: "Framer Motion"},
+          {icon: <FaWordpress />, name: "Wordpress"},
+          {icon: <FaDatabase />, name: "Sql/NoSql"},
+          {icon: <FaNodeJs />, name: "Node.js"},
+          {icon: <FaUnity />, name: "Unity"},
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />,],
+        icons: [{icon: <FaFigma />, name: "Figma"}, {icon: <SiAdobexd />,name: "Adobe Xd"}],
       },
     ],
   },
@@ -114,7 +114,7 @@ function About() {
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 
               after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mt-2 mb-2'>
-                  <CountUp start={0} end={6} duration={4} delay={1.5}/> +
+                  <CountUp start={0} end={Number(new Date().getFullYear()) - 2018} duration={4} delay={1.5}/> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Year of Experience</div>
               </div>
@@ -170,7 +170,19 @@ function About() {
                     <div>{infoItem?.stage}</div>
                     <div className='flex flex-wrap gap-x-4 gap-y-4'>
                       {/* icons */}
-                      {infoItem.icons?.map((icon, iconIndex) => <div key={iconIndex} className='text-2xl text-white'>{icon}</div>)}
+                      {infoItem.icons?.map((icon, iconIndex) => (
+                      <div key={iconIndex} className='text-2xl text-white group relative'>
+                        {icon.icon}
+                        {/* Tooltip */}
+                        <div className="absolute pr-14 right-[-25px] top-0 hidden xl:group-hover:flex cursor-pointer">
+                            <div className="bg-[#edb183e5] relative flex text-primary items-center p-[6px] rounded-[3px]">
+                                <div className="text-[12px] leading-none font-semibold capitalize">{icon.name}</div>
+                                {/* Triangle */}
+                                <div className="border-solid border-l-secondary border-l-8 border-y-transparent border-y-[6px]
+                                border-r-0 absolute -right-2"></div>
+                            </div>
+                        </div>
+                      </div>))}
                     </div>
                   </div>
                 )
