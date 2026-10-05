@@ -1,52 +1,41 @@
-import React from 'react';
-
-// framer motion
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
-
-// components
-import WorkSlider from '@/components/WorkSlider';
-
-function Work() {
+import { ClosingCTA, Meta, PageIntro, ProjectCard } from "@/components/Site";
+import { projects } from "@/content/site";
+export default function Work() {
   return (
-    <div className='h-full xl:h-screen bg-primary/30 py-32 flex items-center px-5 xl:pl-10 xl:pr-32'>
-      <div className="animate-spin-slow opacity-20 bg-circles1 -bottom-32 -right-20  xl:-bottom-52 xl:-right-32 
-      absolute w-[220px] xl:w-[300px] h-[220px] xl:h-[305px] bg-cover bg-no-repeat z-0 "></div>
-      <div className=" bg-shapes -left-64 xl:-left-48 absolute w-[500px] xl:w-[500px] h-[80%] xl:h-full 
-      bg-cover bg-no-repeat z-0 opacity-10 "></div>
-      <div className='container mx-auto'>
-          <div className="flex flex-col xl:flex-row items-center gap-x-2" >
-            {/* text */}
-            <div className="text-center flex w-full lg:w-[15vw] flex-col lg:text-left mb-4">
-              <div className="flex flex-col">
-                <motion.span
-                  variants={fadeIn('down', 0.4)}
-                  initial="hidden"
-                  animate="show"
-                  className='text-sm pl-1'
-                >MY</motion.span>
-                <motion.h2 
-                variants={fadeIn('down', 0.4)}
-                initial="hidden"
-                animate="show"
-                className='h2 text-accent'>
-                  Work
-                </motion.h2>
-              </div>
+    <>
+      <Meta
+        title="Selected work | Jesse Codes"
+        description="Explore Jesse Martin’s website and application development contributions."
+        path="/work"
+      />
+      <PageIntro label="The work" title="Selected projects and contributions.">
+        <p>
+          A closer look at the problems and implementation behind my work. Each
+          project describes my contribution and the part I played.
+        </p>
+      </PageIntro>
+      <div className="container work-groups">
+        {[
+          "Applications and business systems",
+          "Websites and digital experiences",
+        ].map((category) => (
+          <section className="work-group" key={category}>
+            <h2>{category}</h2>
+            <div className="project-grid">
+              {projects
+                .filter((p) => p.category === category)
+                .map((project, index) => (
+                  <ProjectCard
+                    key={project.slug}
+                    project={project}
+                    index={index}
+                  />
+                ))}
             </div>
-            <motion.div 
-            variants={fadeIn('up', 0.3)}
-            initial="hidden"
-            animate="show"
-            
-            className='w-full lg:w-[70vw]'> 
-              {/* slider */}
-              <WorkSlider />
-            </motion.div>
-          </div>
+          </section>
+        ))}
       </div>
-    </div>
-  )
+      <ClosingCTA />
+    </>
+  );
 }
-
-export default Work
