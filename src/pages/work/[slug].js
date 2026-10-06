@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ClosingCTA, Meta, PageIntro, TextLink } from "@/components/Site";
+import { Arrow, ClosingCTA, Meta, PageIntro, TextLink } from "@/components/Site";
 import { projects } from "@/content/site";
 export default function CaseStudy({ project }) {
   return (
@@ -63,7 +63,7 @@ export default function CaseStudy({ project }) {
             <figcaption>
               {project.caption}{" "}
               <a href={project.image} target="_blank" rel="noreferrer">
-                View full image ↗
+                View full image <Arrow />
               </a>
             </figcaption>
           </figure>
@@ -77,7 +77,7 @@ export default function CaseStudy({ project }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {capture.label} ↗
+                {capture.label} <Arrow />
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             ))}

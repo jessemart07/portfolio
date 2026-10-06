@@ -152,6 +152,17 @@ main:focus {
 }
 .menu-toggle {
   display: none;
+  appearance: none;
+  -webkit-appearance: none;
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+}
+.arrow-icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
 }
 .skip-link {
   position: fixed;
@@ -1698,12 +1709,12 @@ dd {
     transform: translateY(-3px);
     box-shadow: 0 8px 0 #286d6818;
   }
-  .motion-enabled .button > span,
-  .motion-enabled .text-link > span {
+  .motion-enabled .button > .arrow-icon,
+  .motion-enabled .text-link > .arrow-icon {
     transition: transform 300ms cubic-bezier(0.2, 0.65, 0.25, 1);
   }
-  .motion-enabled .button:hover > span,
-  .motion-enabled .text-link:hover > span {
+  .motion-enabled .button:hover > .arrow-icon,
+  .motion-enabled .text-link:hover > .arrow-icon {
     transform: translate(4px, -4px);
   }
   .motion-enabled .project-title-visual,
@@ -1868,6 +1879,7 @@ dd {
   color: var(--accent);
 }
 .capture-links a {
+  gap: 6px;
   text-decoration: underline;
   text-underline-offset: 5px;
   min-height: 44px;

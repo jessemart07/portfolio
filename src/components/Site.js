@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { workingProcess, services } from "@/content/site";
+import { Arrow } from "@/components/Icons";
+export { Arrow };
 export function Meta({ title, description, path = "/" }) {
   const url = "https://www.jessecodes.co.za" + path;
   return (
@@ -20,9 +22,6 @@ export function Meta({ title, description, path = "/" }) {
       )}
     </Head>
   );
-}
-export function Arrow() {
-  return <span aria-hidden="true">↗</span>;
 }
 export function Button({ href, children, secondary = false }) {
   return (
@@ -101,7 +100,7 @@ export function ProjectCard({ project, index }) {
           </div>
         )}
         <span className="visual-arrow" aria-hidden="true">
-          ↗
+          <Arrow />
         </span>
       </Link>
       <div className="project-info">

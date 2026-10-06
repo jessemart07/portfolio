@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Meta, PageIntro } from "@/components/Site";
+import { Arrow, Meta, PageIntro } from "@/components/Site";
 import { contactEmail } from "@/content/site";
 import {
   serviceOptions,
@@ -101,7 +101,7 @@ export default function Contact() {
             Your enquiry comes to me. We can talk through the problem, what you
             have so far and the next steps.
           </p>
-          <a href={"mailto:" + contactEmail}>{contactEmail} ↗</a>
+          <a href={"mailto:" + contactEmail}>{contactEmail} <Arrow /></a>
           <p className="contact-note">
             Based in Jeffreys Bay, South Africa.
             <br />
@@ -198,7 +198,7 @@ export default function Contact() {
             disabled={busy || !accessKey}
           >
             {busy ? "Sending…" : "Send enquiry"}{" "}
-            <span aria-hidden="true">↗</span>
+            <Arrow />
           </button>
           <div role="status" aria-live="polite" aria-atomic="true">
             {status && (
@@ -215,7 +215,7 @@ export default function Contact() {
                 {status !== "success" && (
                   <>
                     {" "}
-                    <a href={"mailto:" + contactEmail}>Email Jesse ↗</a>
+                    <a href={"mailto:" + contactEmail}>Email Jesse <Arrow /></a>
                   </>
                 )}
               </p>

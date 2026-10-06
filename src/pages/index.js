@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MotionToggle, NetworkField } from "@/components/Motion";
 import {
+  Arrow,
   Button,
   ClosingCTA,
   Meta,
@@ -84,7 +85,7 @@ export default function Home() {
           <div className="hero-motion-controls">
             <MotionToggle />
             <span className="scroll-cue" aria-hidden="true">
-              Scroll to explore <b>↓</b>
+              Scroll to explore <b><Arrow direction="down" /></b>
             </span>
           </div>
         </div>

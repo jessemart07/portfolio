@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { contactEmail } from "@/content/site";
 import { MotionSurface, MotionToggle, RouteCurtain } from "@/components/Motion";
+import { Arrow } from "@/components/Icons";
 export default function Layout({ children }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -88,7 +89,7 @@ export default function Layout({ children }) {
               className="nav-cta"
               aria-current={router.pathname === "/contact" ? "page" : undefined}
             >
-              Discuss a project <span aria-hidden="true">↗</span>
+              Discuss a project <Arrow />
             </Link>
           </nav>
         </div>
@@ -121,16 +122,16 @@ export default function Layout({ children }) {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub ↗
+            GitHub <Arrow />
           </a>
           <a
             href="https://www.linkedin.com/in/jesse-martin-986971151"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn <Arrow />
           </a>
-          <a href={"mailto:" + contactEmail}>Email ↗</a>
+          <a href={"mailto:" + contactEmail}>Email <Arrow /></a>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Jesse Codes</span>
